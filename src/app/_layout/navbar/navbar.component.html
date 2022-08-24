@@ -1,0 +1,32 @@
+<div id="navi" [ngClass]="{'navigation-is-open': navActive}">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center align-items-lg-stretch">
+      <div class="logo-container flex-1">
+        <figure>
+          <a href="/">
+            <img src="/assets/images/logo.svg" alt="">
+          </a>
+        </figure>
+      </div>
+
+      <div class="navi-nav d-lg-flex align-items-lg-center">
+        <div class="navi-navigation-wrapper d-lg-flex align-items-ld-center">
+          <ul class="navi-primary-nav">
+            <li><a class="navi-link-item" (click)="toggleNav()" routerLink="" routerLinkActive="active">Home</a></li>
+            <li><a class="navi-link-item" (click)="toggleNav()" routerLink="/schedule" routerLinkActive="active">Schedule</a></li>
+            <li><a class="navi-link-item" (click)="toggleNav()" routerLink="/speakers" routerLinkActive="active">Speakers</a></li>
+            <li><a class="navi-link-item" (click)="toggleNav()" routerLink="/attending" routerLinkActive="active">Attending</a></li>
+            <!--<li><a class="navi-link-item" routerLink="" routerLinkActive="active">Q&A</a></li>-->
+            <li class="pt-3 pt-lg-0">
+              <a href="https://www.eventbrite.sg/e/devfest-bizfest-george-town-2019-tickets-74785135353?aff=website" target="_blank" class="btn btn-primary btn-with-link">Get Ticket</a>
+            </li>
+          </ul>
+        </div> <!-- .navi-navigation-wrapper -->
+      </div> <!-- .navi-nav -->
+
+      <a class="navi-nav-trigger" (click)="toggleNav()">Menu
+        <span class="navi-nav-icon"></span>
+      </a>
+    </div>
+  </div>
+</div>
