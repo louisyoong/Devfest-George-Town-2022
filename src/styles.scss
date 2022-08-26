@@ -68,14 +68,49 @@ Homepage
     padding: 0 15px;
   }
 
-  .logo-container {
-    position: relative;
-    width: 100%;
-    max-width: 780px;
-    margin: 0 auto;
-    img {
-      display: block;
-      width: 100%;
+  .svg-penang {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    animation: floatingx 7s ease-in-out infinite;
+  }
+
+  .svg-dialog {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    animation: floating 5s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translatey(0px);
+    }
+
+    50% {
+      transform: translatey(-50px);
+    }
+
+    100% {
+      transform: translatey(0px);
+    }
+  }
+
+  @keyframes floatingx {
+    0% {
+      transform: translatey(0px);
+    }
+
+    50% {
+      transform: translatex(-30px);
+    }
+
+    100% {
+      transform: translatey(0px);
     }
   }
 
@@ -117,6 +152,7 @@ Homepage
       max-width: 530px;
       margin: 0 auto;
       padding: 0;
+      height: 0;
     }
     .cta {
       width: 30%;
@@ -532,14 +568,6 @@ Homepage
       width: 100%;
       max-width: 890px;
       margin: 0 auto;
-    }
-  }
-  .logo-container {
-    width: 100%;
-    max-width: 180px;
-    img {
-      display: block;
-      width: 100%;
     }
   }
 
