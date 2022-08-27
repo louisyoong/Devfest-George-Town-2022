@@ -9,7 +9,7 @@ Color
     background: $color !important;
 
     &:before {
-      opacity: .03;
+      opacity: 0.03;
     }
   }
 }
@@ -49,7 +49,7 @@ Label
 .label {
   position: relative;
   display: inline-block;
-  padding: .32rem .6rem;
+  padding: 0.32rem 0.6rem;
   border-radius: 0 0 10px 10px;
 
   font-size: 10px;
@@ -100,7 +100,7 @@ Navi
   top: 0;
   left: 0;
   z-index: 99;
-  transition: .3s;
+  transition: 0.3s;
 
   padding: 10px 0;
   a {
@@ -135,8 +135,6 @@ Navi
       bottom: 6px;
       //left: 0;
     }
-  ;
-
     a {
       position: relative;
       z-index: 1;
@@ -179,21 +177,22 @@ Navi
     width: 22px;
     height: 2px;
 
-    background: $gray-900;
+    background: $gray-300;
 
     transform: translate(-50%, -50%);
     //transition: .5s;
 
-    &::before, &:after {
+    &::before,
+    &:after {
       /* upper and lower lines of the menu icon */
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
 
-      background: $gray-900;
+      background: $gray-300;
       /* Force Hardware Acceleration in WebKit */
       transform: translateZ(0);
       -webkit-backface-visibility: hidden;
@@ -254,7 +253,8 @@ Navi
   }
 }
 
-.no-touch .navigation-is-open .navi-nav-trigger:hover .navi-nav-icon::after, .no-touch .navigation-is-open .navi-nav-trigger:hover .navi-nav-icon::before {
+.no-touch .navigation-is-open .navi-nav-trigger:hover .navi-nav-icon::after,
+.no-touch .navigation-is-open .navi-nav-trigger:hover .navi-nav-icon::before {
   top: 0;
 }
 
@@ -290,7 +290,7 @@ Navi
       }
 
       &:hover {
-        opacity: .75;
+        opacity: 0.75;
       }
 
       &.selected {
@@ -308,9 +308,9 @@ Navi
     left: 0;
     height: 100%;
     width: 100%;
-    background: #fff;
+    background: #000;
     //transition: .7s;
-    transition: transform .3s;
+    transition: transform 0.3s;
     transform: translateX(-100%);
     .navi-primary-nav {
       li {
@@ -337,13 +337,13 @@ Navi
     -webkit-overflow-scrolling: touch;
     padding: 80px 20px 40px;
 
-    background: #fff;
+    background: #000;
 
     /* Force Hardware Acceleration in WebKit */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: translateX(-100%) translateZ(0);
-    transition: transform .5s;
+    transition: transform 0.5s;
     transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
   }
 }
@@ -354,10 +354,10 @@ Navi
   .navigation-is-open {
     .navi-nav {
       transform: translateX(0);
-      transition: transform .5s;
+      transition: transform 0.5s;
       .navi-navigation-wrapper {
         transform: translateX(0);
-        transition: transform .4s;
+        transition: transform 0.4s;
         transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
       }
     }
@@ -416,9 +416,9 @@ Footer
           margin-bottom: 20px;
           .ft-link {
             &-header {
-              border-bottom: 1px solid #DEDEDE;
+              border-bottom: 1px solid #dedede;
               margin-bottom: 20px;
-              background-image: url('/assets/icons/arrow-up.png');
+              background-image: url("/assets/icons/arrow-up.png");
             }
             &-list {
               display: block;
@@ -429,9 +429,9 @@ Footer
       &-header {
         margin: 0;
         padding: 30px 0;
-        border-top: 1px solid #DEDEDE;
+        border-top: 1px solid #dedede;
 
-        background-image: url('/assets/icons/arrow-down.png');
+        background-image: url("/assets/icons/arrow-down.png");
         background-size: 12px;
         background-position: right 6px center;
         background-repeat: no-repeat;
@@ -445,7 +445,7 @@ Footer
 
 .ft-copyright {
   padding: 40px 0;
-  border-top: 1px solid #DEDEDE;
+  border-top: 1px solid #dedede;
 
   font-size: 12px;
   color: $gray-600;
@@ -461,7 +461,7 @@ Button
 -------------------------------- */
 .btn {
   border-top-left-radius: 0;
-  transition: border-radius .3s;
+  transition: border-radius 0.3s;
   &:hover {
     border-top-left-radius: 16px;
     border-bottom-right-radius: 0;
@@ -469,7 +469,7 @@ Button
   &-with {
     &-download {
       &:after {
-        content: url('/assets/icons/keyboard_arrow_down.svg');
+        content: url("/assets/icons/keyboard_arrow_down.svg");
         width: 10px;
         height: 10px;
         margin-left: 16px;
@@ -477,7 +477,7 @@ Button
     }
     &-link {
       &:after {
-        content: url('/assets/icons/open_in_new.svg');
+        content: url("/assets/icons/open_in_new.svg");
         width: 10px;
         height: 10px;
         margin-left: 16px;
@@ -491,18 +491,17 @@ Button
 Speaker card
 
 -------------------------------- */
+.w-30 {
+  width: 30%;
+}
+
 .speaker-card {
   cursor: pointer;
   margin-bottom: 90px;
   .speaker-image {
     position: relative;
-    display: inline-block;
-    padding-left: 50px;
-    margin-bottom: 20px;
-    &:before,
-    &:after {
-      position: absolute;
-    }
+    display: flex;
+    justify-content: center;
 
     figure {
       position: relative;
@@ -517,13 +516,6 @@ Speaker card
         position: absolute;
       }
     }
-    span {
-      position: absolute;
-      &:before,
-      &:after {
-        position: absolute;
-      }
-    }
   }
   .speaker-details {
     .name {
@@ -532,158 +524,6 @@ Speaker card
     .info {
       font-size: 14px;
       color: $gray-600;
-    }
-  }
-  &:first-of-type,
-  &:nth-child(4n+1) {
-    .speaker-image {
-      figure {
-        img {
-          border-top-right-radius: 130px;
-          border-bottom-right-radius: 130px;
-        }
-        &:before {
-          bottom: 23px;
-          left: 0;
-          transform: translate(-50%, 0);
-
-          content: '';
-          width: 37px;
-          height: 13px;
-          background: $blue;
-          border-bottom-left-radius: 50px;
-          border-bottom-right-radius: 50px;
-        }
-      }
-      span {
-        width: 33%;
-        height: 105%;
-        left: 0;
-        bottom: 0;
-        background: $medium-blue;
-        &:before {
-          top: 50%;
-          left: 0;
-          transform: translate(-50%, -50%);
-
-          content: '';
-          width: 20px;
-          height: 12px;
-          border-top: 1px solid $blue;
-          border-bottom: 1px solid $blue;
-        }
-      }
-    }
-  }
-  &:nth-child(4n+2) {
-    .speaker-image {
-      figure {
-        img {
-          border-top-right-radius: 60px;
-          border-bottom-right-radius: 60px;
-        }
-        &:before {
-          content: url('/assets/icons/dialog_red.svg');
-          left: 0;
-          top: 40%;
-          transform: translateX(-50%);
-        }
-      }
-      span {
-        width: 33%;
-        height: 100%;
-        left: 0;
-        bottom: 0;
-        background: $light-red;
-        &:before {
-          left: 0;
-          bottom: 16%;
-          transform: translate(-25%, 0);
-
-          content: '';
-          width: 22px;
-          height: 16px;
-          background: $red;
-        }
-      }
-    }
-  }
-  &:nth-child(4n+3) {
-    .speaker-image {
-      figure {
-        img {
-          border-bottom-left-radius: 60px;
-        }
-        &:before {
-          bottom: 31px;
-          right: 0;
-          transform: translate(50%, 0);
-
-          content: '';
-          width: 45px;
-          height: 16px;
-          background: $green;
-          border-bottom-left-radius: 50px;
-          border-bottom-right-radius: 50px;
-        }
-      }
-      span {
-        width: 100%;
-        height: 85.5%;
-        top: -12%;
-        left: 0;
-        margin-bottom: 14.5%;
-        background: $light-green;
-        &:before,
-        &:after {
-          top: 30%;
-          left: 6px;
-          transform: translateX(-50%);
-
-          content: '';
-          width: 24px;
-          height: 1px;
-          border-top: 1px solid $green;
-        }
-        &:after {
-          transform: translateX(-50%) rotate(90deg);
-        }
-      }
-    }
-  }
-  &:nth-child(4n+4) {
-    .speaker-image {
-      figure {
-        img {
-          border-bottom-right-radius: 60px;
-        }
-
-        &:before {
-          content: url('/assets/icons/earth_yellow.svg');
-          left: 0;
-          bottom: 0;
-          transform: translateX(-85%);
-        }
-        &:after {
-          content: '';
-          top: -5px;
-          right: 8px;
-          width: 10px;
-          height: 10px;
-          background: $yellow;
-          transform: rotate(45deg);
-        }
-      }
-      span {
-        width: 100%;
-        height: 100%;
-        top: -8%;
-        left: 0;
-        background-image: url('/assets/images/speaker-card-background_yellow.svg');
-        background-size: contain;
-        background-position: top left;
-        background-repeat: no-repeat;
-      }
     }
   }
 }

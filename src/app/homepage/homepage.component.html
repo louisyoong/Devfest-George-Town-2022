@@ -1,54 +1,60 @@
 <div class="homepage-header d-flex align-items-center justify-content-center">
-    <div class="header-bg--mobile">
-        <!--<img class="slide-up hero-image&#45;&#45;blue-cross" src="/assets/icons/mobile/blue-cross.svg">-->
-        <img class="slide-up hero-image--blue-bridge" src="/assets/icons/mobile/blue-bridge.svg">
-        <img class="slide-down hero-image--blue-diamond" src="/assets/icons/mobile/blue-diamond.svg">
-        <img class="slide-up hero-image--green-diagonal-squares" src="/assets/icons/mobile/diagonal-squares.svg">
-        <img class="slide-down hero-image--green-pointer" src="/assets/icons/mobile/green-pointer.svg">
-        <img class="slide-down hero-image--green-square" src="/assets/icons/mobile/green-square.svg">
-        <img class="slide-up hero-image--top-light-blue-circle" src="/assets/icons/mobile/light-blue-circle.svg">
-        <img class="slide-down hero-image--bottom-light-blue-circle" src="/assets/icons/mobile/light-blue-circle.svg">
-        <img class="slide-down hero-image--red-chatbox" src="/assets/icons/mobile/red-chatbox.svg">
-        <img class="slide-down hero-image--red-square" src="/assets/icons/mobile/red-square.svg">
-        <img class="slide-down hero-image--red-diamond" src="/assets/icons/mobile/red-diamond.svg">
-        <img class="slide-up hero-image--yellow-play-button-mobile"
-            src="/assets/icons/mobile/yellow-play-button-mobile.svg">
-        <img class="slide-up hero-image--yellow-sphere" src="/assets/icons/mobile/yellow-sphere.svg">
-        <img class="slide-down hero-image--yellow-vertical-rectangle"
-            src="/assets/icons/mobile/yellow-vertical-rectangle.svg">
+  <div class="inner">
+    <figure class="svg-penang">
+      <img src="/assets/images/penang.svg" alt="img" />
+    </figure>
+    <figure class="svg-dialog">
+      <img src="/assets/images/dialog.svg" alt="img" />
+    </figure>
+    <div class="description text-center">
+      <div class="event-date text-white">3th DEC 2022</div>
+      <div class="event-description">
+        <p class="mb-0 text-white">
+          DevFest Georgetown is back for the 9th year!
+          <br />
+          DevFest is a large community organised annual event with sessions &
+          code labs for developers, students, startups and anyone interested to
+          learn the latest trends and technical knowledge of Google platform,
+          product APIs & open source technologies.
+        </p>
+      </div>
     </div>
+  </div>
+  <div class="cta">
+    <span class="cta-text">Explore the world of DevFest</span>
+    <img class="cta-icon" src="/assets/icons/blue-down-carat.svg" />
+  </div>
+</div>
 
-    <div class="inner">
-        <!-- <div class="logo-container">
-            <div class="logo">
-                <img src="/assets/images/header-logo-0.svg" alt="">
-                <figure class="header-logo header-logo-1"><img src="/assets/images/header-logo-1.svg" alt=""></figure>
-                <figure class="header-logo header-logo-2"><img src="/assets/images/header-logo-2.svg" alt=""></figure>
-                <figure class="header-logo header-logo-3"><img src="/assets/images/header-logo-3.svg" alt=""></figure>
-                <figure class="header-logo header-logo-4"><img src="/assets/images/header-logo-4.svg" alt=""></figure>
-            </div>
-            <div class="tagline">
-                <figure><img src="/assets/images/tagline.svg" alt=""></figure>
-            </div>
-        </div> -->
-        <figure class="svg-penang"><img src="/assets/images/penang.svg" alt="img"></figure>
-                <figure class="svg-dialog"><img src="/assets/images/dialog.svg" alt="img"></figure>
-        <div class="description text-center">
-            <div class="event-date text-white">
-                3th DEC 2022
-            </div>
-            <div class="event-description">
-                <p class="mb-0 text-white">DevFest & BizFest Georgetown is back for the 9th year!
-                    <br>
-                    DevFest is a large community organised annual event with sessions & code labs for developers, students,
-                    startups and anyone interested to learn the latest trends and technical knowledge of Google platform,
-                    product APIs & open source technologies. 
-                </p>
-            </div>
+<div class="homepage-speakers mt-5">
+  <div class="container">
+    <div class="title mt-5 mb-5">
+      <h3>Speakers</h3>
+    </div>
+    <div class="speakers-list pt-5 row">
+      <div
+        class="speaker-card col-12 col-md-6 col-lg-3"
+        *ngFor="let speaker of speakers"
+      >
+        <div class="speaker-image">
+          <img
+            [src]="speaker.imagePath"
+            alt="{{ speaker.name }}"
+            class="img-responsive"
+            style="max-height: 250px"
+          />
         </div>
+        <div class="speaker-details text-center">
+          <div class="name">{{ speaker.name }}</div>
+          <div class="info">{{ speaker.description }}</div>
+        </div>
+      </div>
+      <a
+        routerLink="/speakers"
+        routerLinkActive="active"
+        class="btn btn-outline-primary px-3 mx-auto w-30 mb-5"
+        >View All Speakers</a
+      >
     </div>
-    <div class="cta">
-        <span class="cta-text">Explore the world of DevFest</span>
-        <img class="cta-icon" src="/assets/icons/blue-down-carat.svg">
-    </div>
+  </div>
 </div>

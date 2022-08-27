@@ -166,6 +166,44 @@ Homepage
   @media (min-width: 1520px) {
     background-image: url("/assets/images/bg-header-xl.svg");
   }
+  @media (max-width: 1519px) {
+    min-height: 700px;
+    background-image: url("/assets/images/bg-header-lg.svg");
+
+    .svg-dialog {
+      width: 200px;
+      height: 200px;
+      top: 130px;
+    }
+
+    .svg-penang {
+      width: 300px;
+      height: 300px;
+      right: 40px;
+      bottom: -60px;
+    }
+  }
+
+  @media (max-width: 769px) {
+    background-image: url("/assets/images/bg-header-md.svg");
+  }
+
+  @media (max-width: 425px) {
+    min-height: 700px;
+    background-image: url("/assets/images/bg-header-xs.svg");
+    .svg-dialog {
+      width: 100px;
+      height: 100px;
+      top: 100px;
+    }
+
+    .svg-penang {
+      width: 200px;
+      height: 200px;
+      right: 20px;
+      bottom: 40px;
+    }
+  }
 }
 
 @keyframes slide-in-cta {
@@ -194,6 +232,7 @@ Homepage
   animation: slide-up-logo 10s;
   animation-iteration-count: infinite;
 }
+
 @keyframes slide-up-logo {
   0% {
     opacity: 0;
@@ -216,6 +255,7 @@ Homepage
     transform: translateY(100%);
   }
 }
+
 @-webkit-keyframes slide-up-logo {
   0% {
     opacity: 0;
@@ -251,6 +291,7 @@ Homepage
     animation-delay: 6s;
   }
 }
+
 @keyframes slide-up-tagline {
   0% {
     opacity: 0;
@@ -273,6 +314,7 @@ Homepage
     transform: translateY(100%);
   }
 }
+
 @-webkit-keyframes slide-up-tagline {
   0% {
     opacity: 0;
@@ -347,155 +389,11 @@ Homepage
   }
 }
 
-.header-bg--mobile {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  display: block;
-  img {
-    position: absolute;
-    &.hero-image-- {
-      &blue- {
-        &circle {
-          left: 80%;
-          top: 12%;
-        }
-        &cross {
-          left: 60%;
-          top: 13%;
-          width: 6%;
-        }
-        &bridge {
-          left: 60%;
-          top: 13%;
-          width: 6%;
-        }
-        &diamond {
-          left: 96%;
-          bottom: 30%;
-          max-width: 38px;
-        }
-      }
-      // blue
-      &green- {
-        &diagonal-squares {
-          left: 10%;
-          top: 17.5%;
-          width: 7.5%;
-          max-width: 48px;
-        }
-        &pointer {
-          left: 65%;
-          bottom: 12%;
-          width: 13%;
-          max-width: 86px;
-        }
-        &square {
-          left: 35%;
-          bottom: 10%;
-          width: 7.2%;
-          max-width: 46px;
-        }
-      }
-      // green
-      &top-light-blue-circle {
-        left: 2%;
-        top: 17%;
-        width: 10px;
-      }
-      &bottom-light-blue-circle {
-        left: 22%;
-        bottom: 8%;
-        width: 10px;
-      }
-      &red- {
-        &chatbox {
-          left: 5%;
-          bottom: 15%;
-          width: 9.4%;
-        }
-        &square {
-          left: 20%;
-          bottom: 14%;
-          width: 3.4%;
-        }
-        &diamond {
-          left: 48%;
-          bottom: 19%;
-          width: 12px;
-        }
-      }
-      //red
-      &yellow- {
-        &play-button-mobile {
-          left: 25%;
-          top: 11%;
-          width: 9.6%;
-          max-width: 61px;
-        }
-        &sphere {
-          left: 80%;
-          top: 13%;
-          width: 9%;
-          max-width: 90px;
-        }
-        &vertical-rectangle {
-          left: 90%;
-          bottom: 10%;
-          width: 6.7%;
-          max-width: 42px;
-        }
-      }
-    }
-  }
-  @include media-breakpoint-up(lg) {
-    display: none;
-  }
-}
-
 // Speaker Section
 //
 .homepage-speakers {
-  position: relative;
-  overflow: hidden;
   .title {
     color: $gray-300;
-    h3 {
-      position: relative;
-      display: inline-block;
-      background: $light-blue;
-      margin: 0px;
-      padding: 45px 65px 45px 34px;
-      border-top-right-radius: 80px;
-      border-bottom-right-radius: 0;
-      &:before {
-        position: absolute;
-        top: 80%;
-        right: 0px;
-        transform: translate(50%, -50%);
-        content: "";
-        width: 20px;
-        height: 12px;
-        border-top: 1px solid $blue;
-        border-bottom: 1px solid $blue;
-      }
-
-      @include media-breakpoint-up(md) {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 80px;
-        &:before {
-          top: 50%;
-          left: 0;
-          right: auto;
-          transform: translate(-50%, -50%);
-        }
-      }
-    }
   }
 }
 

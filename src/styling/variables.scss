@@ -1,63 +1,64 @@
 // Color
-$gray-300:      #3C4043;
-$gray-600:      #6B7077;
+$gray-100: #e6e6e6;
+$gray-300: #3c4043;
+$gray-600: #6b7077;
 $gray-900: #212529 !default;
 
-$red:           #db4437;
-$light-red:     #F9D2CF;
-$blue:          #4682FC;
-$medium-blue:   #ADCAF9;
-$dark-blue:     #174EA5;
-$light-blue:    #E8F0FF;
-$yellow:        #f6b816;
-$light-yellow:  #FCE387;
-$orange:        #fbbc02;
-$green:         #31a651;
-$light-green:   #A8DAB4;
-$violet:        #0720f4;
+$red: #db4437;
+$light-red: #f9d2cf;
+$blue: #4682fc;
+$medium-blue: #adcaf9;
+$dark-blue: #174ea5;
+$light-blue: #e8f0ff;
+$yellow: #f6b816;
+$light-yellow: #fce387;
+$orange: #fbbc02;
+$green: #31a651;
+$light-green: #a8dab4;
+$violet: #0720f4;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
-                (
-                        "light-red":        $light-red,
-                        "light-blue":       $light-blue,
-                        "medium-blue":      $medium-blue,
-                        "dark-blue":        $dark-blue,
-                        "light-yellow":     $light-yellow,
-                        "light-green":      $light-green,
-                        "violet":           $violet,
-                ),
-                $colors
+  (
+    "light-red": $light-red,
+    "light-blue": $light-blue,
+    "medium-blue": $medium-blue,
+    "dark-blue": $dark-blue,
+    "light-yellow": $light-yellow,
+    "light-green": $light-green,
+    "violet": $violet,
+  ),
+  $colors
 );
 
-$primary:       $blue;
-$secondary:     $green;
+$primary: $blue;
+$secondary: $green;
 
 // Typography
 //
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 
-$font-weight-normal:          400 !default;
-$font-weight-semibold:        500;
+$font-weight-normal: 400 !default;
+$font-weight-semibold: 500;
 
-$h1-font-size:                $font-size-base * 3.75;
-$h2-font-size:                $font-size-base * 2.625;
+$h1-font-size: $font-size-base * 3.75;
+$h2-font-size: $font-size-base * 2.625;
 
-$headings-color:              $gray-900;
+$headings-color: $gray-900;
 
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
-$input-btn-font-size:         14px;
+$input-btn-font-size: 14px;
 
 // Buttons
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
-$btn-padding-y:   11px;
-$btn-padding-x:   17px;
+$btn-padding-y: 11px;
+$btn-padding-x: 17px;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           16px;
+$btn-border-radius: 16px;
 //$btn-border-radius-lg:        $border-radius-lg !default;
 //$btn-border-radius-sm:        $border-radius-sm !default;
