@@ -527,3 +527,99 @@ Speaker card
     }
   }
 }
+
+/* --------------------------------
+
+Ticker devfest
+
+-------------------------------- */
+
+.devfest-ticker {
+  --devfest-red: #dc362e;
+  --devfest-blue: #1b6ef3;
+  --devfest-yellow: #f09d00;
+  --devfest-seconds-color: white;
+}
+
+.devfest-landing-for-html {
+  margin: 0 auto;
+}
+
+.devfest-ticker-row > .devsite-landing-row-inner {
+  height: 120px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.devfest-ticker-row .devsite-landing-row-group {
+  width: 100vw;
+}
+
+.devfest-ticker:hover {
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.devfest-ticker {
+  animation: marquee 60s linear infinite;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.devfest-ticker-list {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+}
+
+.devfest-ticker-item {
+  background: var(--devfest-ticker-item-background);
+  margin: 0;
+  padding: 30px;
+  white-space: nowrap;
+
+  a {
+    font-size: var(--devfest-ticker-item-padding);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.devfest-ticker-row {
+  --devfest-ticker-height: 56px;
+}
+
+.devfest-ticker-item {
+  --devfest-ticker-item-font: 500 18px "Google Sans";
+  --devfest-ticker-item-padding: 21px;
+}
+
+.devfest-ticker-yellow {
+  --devfest-ticker-item-background: var(--devfest-yellow);
+}
+
+.devfest-ticker-red {
+  --devfest-ticker-item-background: url(/community/devfest/images/ticker-red-icon.png)
+    no-repeat top 17px right 17px / 30px var(--devfest-red);
+}
+
+.devfest-ticker-blue {
+  --devfest-ticker-item-background: url(/community/devfest/images/ticker-blue-icon.png)
+    no-repeat top 9px right 18px / 41px var(--devfest-blue);
+}
+
+.devfest-ticker-gray {
+  --devfest-ticker-item-background: url(/community/devfest/images/ticker-gray-icon.png)
+    no-repeat top 14px left 9px / 26px #191d1c;
+}
