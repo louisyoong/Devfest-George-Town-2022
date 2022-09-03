@@ -8,21 +8,23 @@ import { NavbarComponent } from './_layout/navbar/navbar.component';
 import { HomeLayoutComponent } from './_layout/home-layout/home-layout.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './_layout/footer/footer.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
     AppComponent,
-        NavbarComponent,
-        HomeLayoutComponent,
-        HomepageComponent,
+    NavbarComponent,
+    HomeLayoutComponent,
+    HomepageComponent,
     FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SlickCarouselModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

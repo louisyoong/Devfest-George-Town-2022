@@ -623,3 +623,36 @@ Ticker devfest
   --devfest-ticker-item-background: url(/community/devfest/images/ticker-gray-icon.png)
     no-repeat top 14px left 9px / 26px #191d1c;
 }
+
+/* --------------------------------
+
+Carousel
+
+-------------------------------- */
+.slick-slider {
+  width: 100%;
+  margin: 10px 0;
+  background: #fff;
+
+  img {
+    border-radius: 20px;
+    padding: 0 5px !important;
+  }
+}
+
+.slick-dots {
+  bottom: -45px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  font-size: 20px !important;
+  color: #f09d00 !important;
+}
+
+.slick-dots li button:before {
+  font-size: 12px !important;
+}
+
+.mb-6 {
+  margin-bottom: 5rem;
+}
