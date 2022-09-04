@@ -1,0 +1,31 @@
+.partner-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  border-top: 1px solid #f1f3f4;
+}
+
+.partner-block {
+  padding-top: 40px;
+  h5 {
+    font-size: 18px;
+    color: #495057;
+    margin-bottom: 18px;
+  }
+
+  .logo-item {
+    padding: 18px;
+    max-width: 190px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .logo-item-comm {
+    padding: 18px;
+    max-width: 300px;
+    img {
+      width: 100%;
+    }
+  }
+}

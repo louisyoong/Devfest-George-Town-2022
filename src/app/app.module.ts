@@ -9,6 +9,7 @@ import { HomeLayoutComponent } from './_layout/home-layout/home-layout.component
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './_layout/footer/footer.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { PartnerComponent } from './partner/partner.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     HomeLayoutComponent,
     HomepageComponent,
     FooterComponent,
+    PartnerComponent,
   ],
   imports: [
     BrowserModule,

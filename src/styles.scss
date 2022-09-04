@@ -464,6 +464,21 @@ Homepage
   }
 }
 
+.bg-shape-top {
+  background: url(/assets/images/bg-gray.svg) no-repeat;
+  margin-top: 50px;
+  background-size: cover;
+  width: 100%;
+  height: 50px;
+}
+
+.bg-shape-bottom {
+  background: url(/assets/images/bg-gray-bottom.svg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+
 .homepage-about {
   position: relative;
   padding-top: 140px;
@@ -478,34 +493,33 @@ Homepage
   .illustration {
     position: absolute;
     &-rectangle {
-      width: 49px;
-      height: 56px;
+      width: 100px;
+      height: 100px;
 
-      top: 27px;
-      left: 15px;
+      top: 60px;
+      left: 60px;
+      background: url(/assets/images/dev.svg) no-repeat;
     }
     &-hand {
       width: 68px;
 
-      top: 0;
+      top: -40px;
       left: 50%;
     }
     &-square {
-      width: 12px;
-      height: 12px;
+      width: 120px;
+      height: 120px;
 
       top: 63px;
       right: 16px;
-
-      border: 1px solid $red;
-      transform: rotate(45deg);
+      background: url(/assets/images/penang.svg) no-repeat;
     }
   }
   @include media-breakpoint-up(md) {
-    margin-top: 35px;
+    margin-top: 0;
   }
   @include media-breakpoint-up(lg) {
-    padding-top: 38px;
+    padding-top: 0;
     .illustration {
       &-rectangle {
         top: 0;
@@ -514,7 +528,7 @@ Homepage
         left: 55%;
       }
       &-square {
-        top: 0;
+        top: -70px;
         right: 88px;
       }
     }
@@ -554,10 +568,8 @@ Homepage
         left: 20%;
       }
       &.illustration-circle {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: 1px solid $medium-blue;
+        width: 90px;
+        height: 90px;
 
         top: 84px;
         left: 30%;
@@ -582,37 +594,40 @@ Homepage
           height: 12px;
         }
         &.illustration-circle {
-          width: 20px;
-          height: 20px;
+          width: 40px;
+          height: 30px;
         }
       }
       @include media-breakpoint-up(lg) {
         &.illustration-rectangle {
-          width: 35px;
-          height: 12px;
+          width: 30px;
+          height: 30px;
 
-          top: 157px;
+          top: 40px;
           left: 50%;
           transform: translateX(-321px);
         }
         &.illustration-circle {
-          width: 20px;
-          height: 20px;
+          width: 30px;
+          height: 30px;
 
-          top: 50%;
+          top: 40%;
           left: 50%;
           transform: translateX(-190px) translateY(-50%);
         }
         &.illustration-play {
+          width: 120px;
           top: 48%;
           left: 10px;
           transform: translateY(-50%);
         }
         &.illustration-ticket {
+          width: 120px;
           top: 46px;
           transform: translateX(180px);
         }
         &.illustration-triangle {
+          width: 80px;
           top: 50%;
           right: 35px;
         }
