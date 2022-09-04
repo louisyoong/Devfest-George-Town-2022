@@ -535,6 +535,26 @@ Homepage
   }
 }
 
+@include media-breakpoint-up(xs) {
+  .homepage-about {
+    padding-top: 0;
+
+    .illustration {
+      &-rectangle {
+        top: -80px;
+        left: 20px;
+      }
+      &-square {
+        top: 20px;
+      }
+    }
+  }
+
+  .bg-shape-bottom {
+    height: 100px;
+  }
+}
+
 //
 // Ticket Section
 //
@@ -588,6 +608,29 @@ Homepage
         right: 10px;
       }
 
+      @include media-breakpoint-up(xs) {
+        &.illustration-circle {
+          width: 20px;
+          height: 30px;
+        }
+        &.illustration-play {
+          width: 100px;
+          top: 28%;
+          left: 10px;
+          transform: translateY(-50%);
+        }
+        &.illustration-ticket {
+          width: 100px;
+          top: 1%;
+          left: 10%;
+          transform: translateX(180px);
+        }
+        &.illustration-triangle {
+          width: 40px;
+          top: 60%;
+          right: 35px;
+        }
+      }
       @include media-breakpoint-up(md) {
         &.illustration-rectangle {
           width: 35px;
@@ -596,6 +639,22 @@ Homepage
         &.illustration-circle {
           width: 40px;
           height: 30px;
+        }
+        &.illustration-play {
+          width: 100px;
+          top: 48%;
+          left: 10px;
+          transform: translateY(-50%);
+        }
+        &.illustration-ticket {
+          width: 100px;
+          top: 36%;
+          transform: translateX(180px);
+        }
+        &.illustration-triangle {
+          width: 50px;
+          top: 90%;
+          right: 35px;
         }
       }
       @include media-breakpoint-up(lg) {
